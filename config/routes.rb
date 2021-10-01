@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'animals', to: 'animals#index'
+  get 'animals/new', to: 'animals#new'
+  get 'animals/:id', to: 'animals#show', as: 'animal'
+  post 'animals', to: 'animals#create'
+  get 'animals/:id/edit', to: 'animals#edit'
+  patch 'animals/:id', to: 'animals#update'
 end
