@@ -28,7 +28,7 @@ class AnimalsController < ApplicationController
   end
 
   def adoption
-    
+    @animal = Animal.find(params[:animal_id])
   end
 
   private
@@ -36,5 +36,4 @@ class AnimalsController < ApplicationController
   def animal_params
     params.require(:animal).permit(:name, :category, :birth, :adopted)
   end
-
 end
